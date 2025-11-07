@@ -43,7 +43,7 @@ const ProjectSection: FC<Props> = ({ title, links, description }) => {
 				<h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
 					{title}
 				</h2>
-				<p className="italic text-sm -mt-2">{description}</p>
+				<p className="italic text-xs -mt-2">{description}</p>
 			</div>
 			<div className="ml-4 flex flex-row gap-2 ">
 				{links.map((link, index) => (

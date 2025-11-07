@@ -51,15 +51,26 @@ export default function Home() {
 
 	return (
 		<div className="w-full min-h-screen flex justify-center bg-zinc-50 font-sans dark:bg-black pt-10">
-			<div className="grid grid-cols-1 md:grid-cols-2 w-2/3 ">
+			<div className="grid grid-cols-1 md:grid-cols-2 w-2/3 gap-4 ">
 				<div className="flex flex-col gap-2">
 					<section id="contact-section">
 						<ContactSection type="email" value="victorlms.dev@gmail.com" />
 						<ContactSection type="phone" value="+55 21 98019 1911" />
 						<ContactSection type="linkedin" value="/victorlimams" />
 					</section>
+					<section id="highlights">
+						<h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+							Destaque
+						</h2>
+						<p className="text-justify whitespace-pre-wrap">
+							Realização de um intercâmbio acadêmico para a Austrália na
+							Greystone College estudando Gerência de Projetos (Certificate IV).
+							Onde pude aprimorar o inglês, conhecer novas culturas e aprofundar
+							meus conhecimentos na área de gerenciamento de projetos.
+						</p>
+					</section>
 					<section id="projects-section">
-						<h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+						<h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
 							Projetos
 						</h2>
 						<ProjectSection

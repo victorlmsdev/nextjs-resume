@@ -1,9 +1,9 @@
+import ThemeSwitch from "@/components/ThemeSwitch";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, EB_Garamond } from "next/font/google";
-import "./globals.css";
+import { EB_Garamond, Geist, Geist_Mono } from "next/font/google";
 import Particles from "../components/Particles";
-import { ThemeProvider, useTheme } from "next-themes";
-import { Switch } from "@/components/ui/switch";
+import "./globals.css";
+import { ThemeProvider } from "./ThemeProvider";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -31,12 +31,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" data-theme="dark" suppressHydrationWarning>
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${ebGaramond.variable} antialiased `}
 			>
-				<ThemeProvider defaultTheme="dark">
-					<header className=" min-h-10 bg-[#F5F5F5] justify-center items-center flex w-full z-0  py-24 fixed inset-shadow-sm">
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+					<header className=" min-h-10 bg-[#F5F5F5] dark:bg-[#1E1E1E] justify-center items-center flex w-full z-0  py-24 fixed inset-shadow-sm">
 						<div className="absolute w-full overflow-hidden md:block">
 							<Particles />
 						</div>
@@ -51,11 +51,12 @@ export default function RootLayout({
 								</div>
 							</div>
 						</div>
-						<div className="absolute right-0 top-10 py-2 px-1 rounded-l-2xl bg-background">
-							<Switch />
-						</div>
 					</header>
-					<main className="pt-64 z-10 relative ">{children}</main>
+					<main className="pt-64 z-10 relative ">
+						<ThemeSwitch />
+
+						{children}
+					</main>
 				</ThemeProvider>
 			</body>
 		</html>

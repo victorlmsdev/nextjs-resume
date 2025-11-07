@@ -142,7 +142,7 @@ export const options: ISourceOptions = {
 			},
 		},
 		color: {
-			value: "#050505",
+			value: "#FFF",
 			animation: {
 				h: {
 					count: 0,
@@ -393,32 +393,21 @@ export const options: ISourceOptions = {
 			},
 			width: 1,
 		},
-		links: {
-			blink: false,
-			color: {
-				value: "#050505",
-			},
-			consent: false,
-			distance: 50,
-			enable: true,
-			frequency: 1,
-			opacity: 0.4,
-			shadow: {
-				blur: 5,
-				color: {
-					value: "#000",
-				},
-				enable: false,
-			},
-			triangles: {
-				enable: false,
-				frequency: 0.1,
-			},
-			width: 1,
-			warp: false,
-		},
+		// links: {
+		// 	blink: false,
+		// 	color: {
+		// 		value: "#FFF",
+		// 	},
+		// 	consent: false,
+		// 	distance: 50,
+		// 	enable: true,
+		// 	frequency: 1,
+		// 	opacity: 0.4,
+		// 	width: 1,
+		// 	warp: false,
+		// },
 		repulse: {
-			value: 0,
+			value: 0.5,
 			enabled: false,
 			distance: 1,
 			duration: 1,
@@ -442,32 +431,31 @@ export const options: ISourceOptions = {
 			value: true,
 		},
 	},
-	polygon: {
-		draw: {
-			enable: true,
-			stroke: {
-				color: {
-					value: "#050505",
-				},
-				width: 1,
-				opacity: 0.1,
-			},
-		},
-		enable: true,
-		inline: {
-			arrangement: "equidistant",
-		},
-		move: {
-			radius: 10,
-			type: "path",
-		},
-		scale: 1,
-		type: "inline",
-		// url: "https://particles.js.org/images/smalldeer.svg",
-		url: "/logo-react.svg",
-		position: {
-			x: 80,
-			y: 50,
-		},
-	},
+	// polygon: {
+	// 	draw: {
+	// 		enable: true,
+	// 		stroke: {
+	// 			color: {
+	// 				value: "#FFF",
+	// 			},
+	// 			width: 1,
+	// 			opacity: 0.1,
+	// 		},
+	// 	},
+	// 	enable: true,
+	// 	inline: {
+	// 		arrangement: "equidistant",
+	// 	},
+	// 	move: {
+	// 		radius: 10,
+	// 		type: "path",
+	// 	},
+	// 	scale: 1,
+	// 	type: "inline",
+	// 	url: "/logo-react.svg",
+	// 	position: {
+	// 		x: 80,
+	// 		y: 50,
+	// 	},
+	// },
 };
