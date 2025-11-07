@@ -35,7 +35,7 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${ebGaramond.variable} antialiased `}
 			>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+				<ThemeProvider attribute="class" defaultTheme="light" enableSystem>
 					<header className=" min-h-10 bg-[#F5F5F5] dark:bg-[#1E1E1E] justify-center items-center flex w-full z-0  py-24 fixed inset-shadow-sm">
 						<div className="absolute w-full overflow-hidden md:block">
 							<Particles />
