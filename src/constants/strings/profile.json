@@ -1,0 +1,10 @@
+{
+	"ptBr": {
+		"profileTitle": "Perfil",
+		"profileDescription": "Engenheiro de Software com 6 anos de experiência no desenvolvimento de projetos (não apenas escrita de código) incluindo definições de arquitetura, modernização de código legado, otimização de performance, observabilidade e manutenção na Google Play e Apple App Store. Focado em React Native (CLI e Expo) e ReactJS (NextJS), também tenho experiência prévia com Java (Spring, JSF - Primefaces, JPA, Hibernate, Maven e Gradle) para desenvolvimento fullstack. Atuação prévia como líder técnico, focando em decisões de arquitetura e produto, complementada por estudos em Gerência de Projetos na Austrália, reforçando a visão estratégica além da experiência de trabalhar com equipe multinacional 100% em inglês presencialmente."
+	},
+	"en": {
+		"profileTitle": "Profile",
+		"profileDescription": "Software Engineer with 6 years of experience in project development (not just code writing) including architecture definitions, legacy code modernization, performance optimization, observability, and maintenance on Google Play and Apple App Store. Focused on React Native (CLI and Expo) and ReactJS (NextJS), I also have previous experience with Java (Spring, JSF - Primefaces, JPA, Hibernate, Maven, and Gradle) for full-stack development. Previously worked as a technical lead, focusing on architecture and product decisions, complemented by studies in Project Management in Australia, enhancing strategic vision beyond the experience of working with a multinational team 100% in English on-site."
+	}
+}
