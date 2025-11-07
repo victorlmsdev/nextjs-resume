@@ -68,6 +68,11 @@ export default function Home() {
 							Onde pude aprimorar o inglês, conhecer novas culturas e aprofundar
 							meus conhecimentos na área de gerenciamento de projetos.
 						</p>
+						<br />
+						<p>
+							Também tive uma experiência profissional híbrida com equipe
+							internacional 100% em inglês.
+						</p>
 					</section>
 					<section id="projects-section">
 						<h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
