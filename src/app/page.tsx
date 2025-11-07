@@ -1,6 +1,7 @@
 import ContactSection from "@/components/ContactSection";
 import useTranslate from "./hooks/useTranslate";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ProjectSection from "@/components/ProjectSection";
 
 export default function Home() {
 	const { translate } = useTranslate();
@@ -57,7 +58,49 @@ export default function Home() {
 						<ContactSection type="phone" value="+55 21 98019 1911" />
 						<ContactSection type="linkedin" value="/victorlimams" />
 					</section>
-					<section id="skills-section"></section>
+					<section id="projects-section">
+						<h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+							Projetos
+						</h2>
+						<ProjectSection
+							title="Screen Details"
+							description="Navegador de filmes"
+							links={[
+								{
+									url: "https://www.amazon.com.br/Victor-Lima-Mello-dos-Santos/dp/B0D9WZSL7Q/ref=sr_1_3?crid=1N114VEBV6XY9&dib=eyJ2IjoiMSJ9.mjIdgx61FlmbMz0UMR5wlqsEUUNJiiHG739mA1ZOeoBMvIE69nd_Hxgb08q-2bMsvorR4L_cYAOnQQxFHNLnFqIWOCnZt4ih_wnr7unHbKoSAk_GhaG2Hk7OwbldeaVVSnZfuwF3_o7oz5h5Nwy7c2tI6faeX5ZHvS4n9GZCl0A_zfttoNKPx-cSOVOYwyHEdqPk8bwdp5xUEPauhMO2bBBHYVcbntE7OlKY3ZEKv_b00gr7aJf3i9DJpysbOV42BeO407guza7ZeVc4XBFgLNQlK0W06yqHKGnZ_2T7TP0.1u3WkxayjgMrjc3l3EOy4ZVGaKCb90dfbX43VCptOxw",
+									label: "amazon",
+								},
+							]}
+						/>
+						<ProjectSection
+							title="Pefisa Empresas"
+							description="Internet/Mobile Banking"
+							links={[
+								{
+									url: "https://apps.apple.com/br/app/pefisa-empresas/id1573817046",
+									label: "apple",
+								},
+								{
+									url: "https://play.google.com/store/apps/details?id=com.apptoken_native&hl=en_US&gl=US",
+									label: "android",
+								},
+							]}
+						/>
+						<ProjectSection
+							title="Pefisa Pay"
+							description="Mobile Banking"
+							links={[
+								{
+									url: "https://apps.apple.com/br/app/pefisa-pay/id1639407102",
+									label: "apple",
+								},
+								{
+									url: "https://play.google.com/store/apps/details?id=com.pefisapay&hl=pt",
+									label: "android",
+								},
+							]}
+						/>
+					</section>
 				</div>
 				<div className="text-justify gap-2 grid">
 					<section id="profile">
