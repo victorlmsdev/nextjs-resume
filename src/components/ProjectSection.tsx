@@ -32,7 +32,7 @@ const ProjectSection: FC<Props> = ({ title, links, description }) => {
 				alt="mySvgImage"
 				width={32}
 				height={32}
-				className="h-6 w-6 inline-block mr-2"
+				className="h-6 w-6 inline-block mr-2 dark:invert"
 			/>
 		);
 	};

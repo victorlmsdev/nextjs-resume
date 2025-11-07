@@ -62,7 +62,7 @@ export default function Home() {
 						<h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
 							Destaque
 						</h2>
-						<p className="text-justify whitespace-pre-wrap">
+						<p className="text-justify whitespace-pre-wrap p-0 md:pr-8">
 							Realização de um intercâmbio acadêmico para a Austrália na
 							Greystone College estudando Gerência de Projetos (Certificate IV).
 							Onde pude aprimorar o inglês, conhecer novas culturas e aprofundar
