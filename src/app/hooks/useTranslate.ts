@@ -1,14 +1,12 @@
-import { ProfileStrings } from "@/constants/strings";
+import { PtBR, EnUS } from "@/constants/strings";
 
-type LangStrings = (typeof ProfileStrings)[keyof typeof ProfileStrings];
-
-type TranslationKey = keyof LangStrings;
+type TranslationKey = keyof Dictionary;
 
 const useTranslate = () => {
-	const lang = "ptBr" as keyof typeof ProfileStrings;
+	const translate = (sectionKey: TranslationKey) => {
+		const section = PtBR[sectionKey] || sectionKey;
 
-	const translate = (key: TranslationKey) => {
-		return ProfileStrings[lang][key] || key;
+		return section;
 	};
 
 	return { translate };

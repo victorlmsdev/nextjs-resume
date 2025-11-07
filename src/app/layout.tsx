@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, EB_Garamond } from "next/font/google";
 import "./globals.css";
-import Particles from "./_components/Particles";
+import Particles from "../components/Particles";
 import { ThemeProvider, useTheme } from "next-themes";
 import { Switch } from "@/components/ui/switch";
 

@@ -1,23 +1,82 @@
 import ContactSection from "@/components/ContactSection";
 import useTranslate from "./hooks/useTranslate";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function Home() {
 	const { translate } = useTranslate();
+	const profileStrings = translate("profile") as ProfileSection;
+	const experienceStrings = translate("experience") as ExperienceSection;
+
+	const renderExperienceItems = () => {
+		return experienceStrings.items.map((item, index) => (
+			<div key={index} className="mb-6">
+				<h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+					{item.subtitle}
+				</h3>
+				<h4 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+					{item.role}
+				</h4>
+				<span className="text-sm italic text-zinc-700 dark:text-zinc-300">
+					{item.date}
+				</span>
+				<div className="border-l-2 border-zinc-900 pl-4">
+					<div className="mt-2">
+						{item.description.map((desc, descIndex) => (
+							<p
+								key={descIndex}
+								className="mb-2 whitespace-pre-wrap text-zinc-800 dark:text-zinc-200"
+							>
+								{desc}
+							</p>
+						))}
+					</div>
+					<div className="mt-2">
+						<strong className="text-zinc-900 dark:text-zinc-100 mr-2">
+							Stack:
+						</strong>
+						{item.stack.map((tech, techIndex) => (
+							<span
+								key={techIndex}
+								className="inline-block bg-zinc-900 dark:bg-zinc-800 text-background dark:text-zinc-100 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+							>
+								{tech}
+							</span>
+						))}
+					</div>
+				</div>
+			</div>
+		));
+	};
+
 	return (
 		<div className="w-full min-h-screen flex justify-center bg-zinc-50 font-sans dark:bg-black pt-10">
 			<div className="grid grid-cols-1 md:grid-cols-2 w-2/3 ">
 				<div className="flex flex-col gap-2">
-					<ContactSection type="email" value="victorlms.dev@gmail.com" />
-					<ContactSection type="phone" value="+55 21 98019 1911" />
-					<ContactSection type="linkedin" value="/victorlimams" />
+					<section id="contact-section">
+						<ContactSection type="email" value="victorlms.dev@gmail.com" />
+						<ContactSection type="phone" value="+55 21 98019 1911" />
+						<ContactSection type="linkedin" value="/victorlimams" />
+					</section>
+					<section id="skills-section"></section>
 				</div>
-				<div>
-					<h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100">
-						{translate("profileTitle")}
-					</h1>
-					<p>TL;DR;</p>
+				<div className="text-justify gap-2 grid">
+					<section id="profile">
+						<h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+							{profileStrings.title}
+						</h2>
+						<p className="whitespace-pre-wrap">
+							{profileStrings.description.join("\n\n")}
+						</p>
+					</section>
+					<section id="experience-section">
+						<h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+							{experienceStrings.title}
+						</h2>
+						{renderExperienceItems()}
+					</section>
 				</div>
 			</div>
+			<ScrollToTopButton />
 		</div>
 	);
 }
