@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Particles from "./_components/Particles";
+import { ThemeProvider, useTheme } from "next-themes";
+import { Switch } from "@/components/ui/switch";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -29,28 +31,32 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" data-theme="dark" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${ebGaramond.variable} antialiased `}
 			>
-				<header className=" min-h-10 bg-[#F5F5F5] justify-center items-center flex w-full  py-24">
-					<div className="absolute w-full overflow-hidden md:block">
-						<Particles />
-					</div>
-					<div className="flex-row  w-2/3 font-serif">
-						<div className="flex-col items-start">
-							<h1 className="text-6xl font-extrabold">Victor</h1>
-							<h1 className="text-4xl tracking-tight -mt-4">Lima</h1>
-							<div className=" flex flex-row w-full gap-2">
-								<h1 className="text-xl tracking-tight -mt-2">
-									Engenheiro de Software
-								</h1>
+				<ThemeProvider defaultTheme="dark">
+					<header className=" min-h-10 bg-[#F5F5F5] justify-center items-center flex w-full z-0  py-24 fixed inset-shadow-sm">
+						<div className="absolute w-full overflow-hidden md:block">
+							<Particles />
+						</div>
+						<div className="w-2/3 font-serif">
+							<div className="flex-col items-start">
+								<h1 className="text-6xl font-extrabold ">Victor</h1>
+								<h1 className="text-4xl tracking-tight -mt-4">Lima</h1>
+								<div className=" flex flex-row w-full gap-2">
+									<h1 className="text-xl tracking-tight -mt-2">
+										Engenheiro de Software
+									</h1>
+								</div>
 							</div>
 						</div>
-						<div className="flex-col"></div>
-					</div>
-				</header>
-				<main>{children}</main>
+						<div className="absolute right-0 top-10 py-2 px-1 rounded-l-2xl bg-background">
+							<Switch />
+						</div>
+					</header>
+					<main className="pt-64 z-10 relative ">{children}</main>
+				</ThemeProvider>
 			</body>
 		</html>
 	);

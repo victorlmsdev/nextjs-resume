@@ -466,8 +466,8 @@ export const options: ISourceOptions = {
 		// url: "https://particles.js.org/images/smalldeer.svg",
 		url: "/logo-react.svg",
 		position: {
-			x: 90,
-			y: 60,
+			x: 80,
+			y: 50,
 		},
 	},
 };
